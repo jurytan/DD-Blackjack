@@ -4,17 +4,13 @@ import java.util.*;
 public class Hand{
 
     //fields - cards, point value, bet
-    List <Card> currentCards = new ArrayList<Card>();
+    List <Card> currentCards;
     int pointValue;
     double bet;
 
     public Hand()
     {
-        Card randomCard1 = new Card();
-        Card randomCard2 = new Card();
-
-        currentCards.add(randomCard1); //Add the first card
-        currentCards.add(randomCard2); //Add the second card
+        currentCards = new ArrayList<Card>();
         pointValue = 0;
         bet = 100;
     }
@@ -32,7 +28,6 @@ public class Hand{
         return this.currentCards;
     }
 
-    // I believe this getter below will satisfy the "get num of points" action method.
     public int getPointValue() 
     {
         return this.pointValue;
@@ -59,12 +54,17 @@ public class Hand{
         this.bet = bet;
     }
 
-    public void addCards()
+    public int calculateHandScore(List <Card> userCards)
+    {
+        return 0;
+    }
+
+    public void addCards(List <Card> userCards)
     {
 
     }
 
-    public void revealCards()
+    public void revealCards(List <Card> userCards)
     {
 
     }
